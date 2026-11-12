@@ -1,54 +1,171 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CPA Manager Plus — 自托管的 CPA / CLIProxyAPI 管理面板与可观测性平台</title>
-    <meta
-      name="description"
-      content="CPA Manager Plus（CPAMP）是面向 CPA / CLIProxyAPI 的自托管管理面板与 AI Gateway 可观测性平台：管理 Provider、凭证与 OAuth，持久化请求历史，分析 Token 与成本，巡检账号健康与配额。"
-    />
+    <title>CPA Manager Plus: CLIProxyAPI Panel &amp; AI Gateway Dashboard</title>
+    <meta name="description" content="Self-hosted panel and observability dashboard for CPA / CLIProxyAPI: request history, token cost, quotas and account health for Codex, Claude, Gemini and more." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Seakee" />
     <meta name="theme-color" content="#005cff" />
     <link rel="canonical" href="https://cpamp.seakee.dev/" />
-    <link rel="alternate" hreflang="zh-CN" href="https://cpamp.seakee.dev/" />
-    <link rel="alternate" hreflang="en" href="https://cpamp.seakee.dev/en/" />
+    <link rel="alternate" hreflang="en" href="https://cpamp.seakee.dev/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://cpamp.seakee.dev/zh/" />
     <link rel="alternate" hreflang="x-default" href="https://cpamp.seakee.dev/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="CPA Manager Plus" />
-    <meta property="og:locale" content="zh_CN" />
-    <meta property="og:locale:alternate" content="en_US" />
-    <meta property="og:title" content="CPA Manager Plus — 看清 AI 网关里的每一次请求" />
-    <meta
-      property="og:description"
-      content="自托管的 CPA / CLIProxyAPI 管理面板与可观测性平台：请求历史、成本分析、配额与账号健康，一个本地面板搞定。"
-    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:title" content="CPA Manager Plus — See every request through your AI gateway" />
+    <meta property="og:description" content="Self-hosted management and observability for CPA / CLIProxyAPI: request history, cost analytics, quotas and account health in one local panel." />
     <meta property="og:url" content="https://cpamp.seakee.dev/" />
     <meta property="og:image" content="https://cpamp.seakee.dev/assets/og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CPA Manager Plus dashboard showing requests, cost, success rate and traffic trends" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CPA Manager Plus — See every request through your AI gateway" />
+    <meta name="twitter:description" content="Self-hosted management and observability for CPA / CLIProxyAPI: request history, cost analytics, quotas and account health in one local panel." />
     <meta name="twitter:image" content="https://cpamp.seakee.dev/assets/og.jpg" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-    <link rel="preload" as="image" href="/assets/img/dashboard-zh.webp" type="image/webp" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" as="image" href="/assets/img/dashboard.webp" type="image/webp" />
     <link rel="stylesheet" href="/assets/styles.css" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "CPA Manager Plus",
-        "alternateName": "CPAMP",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Linux, macOS, Windows, Docker",
-        "license": "https://opensource.org/licenses/MIT",
-        "url": "https://cpamp.seakee.dev/",
-        "downloadUrl": "https://github.com/seakee/CPA-Manager-Plus/releases",
-        "codeRepository": "https://github.com/seakee/CPA-Manager-Plus",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://cpamp.seakee.dev/#org",
+            "name": "CPA Manager Plus",
+            "url": "https://cpamp.seakee.dev/",
+            "logo": "https://cpamp.seakee.dev/apple-touch-icon.png",
+            "sameAs": [
+              "https://github.com/seakee/CPA-Manager-Plus",
+              "https://hub.docker.com/r/seakee/cpa-manager-plus"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://cpamp.seakee.dev/#website",
+            "url": "https://cpamp.seakee.dev/",
+            "name": "CPA Manager Plus",
+            "inLanguage": [
+              "en",
+              "zh-CN"
+            ],
+            "publisher": {
+              "@id": "https://cpamp.seakee.dev/#org"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://cpamp.seakee.dev/#webpage",
+            "url": "https://cpamp.seakee.dev/",
+            "name": "CPA Manager Plus: CLIProxyAPI Panel & AI Gateway Dashboard",
+            "description": "Self-hosted panel and observability dashboard for CPA / CLIProxyAPI: request history, token cost, quotas and account health for Codex, Claude, Gemini and more.",
+            "inLanguage": "en",
+            "isPartOf": {
+              "@id": "https://cpamp.seakee.dev/#website"
+            },
+            "about": {
+              "@id": "https://cpamp.seakee.dev/#software"
+            },
+            "primaryImageOfPage": "https://cpamp.seakee.dev/assets/og.jpg"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://cpamp.seakee.dev/#software",
+            "name": "CPA Manager Plus",
+            "alternateName": "CPAMP",
+            "description": "Self-hosted panel and observability dashboard for CPA / CLIProxyAPI: request history, token cost, quotas and account health for Codex, Claude, Gemini and more.",
+            "applicationCategory": "DeveloperApplication",
+            "applicationSubCategory": "AI gateway management and observability",
+            "operatingSystem": "Linux, macOS, Windows, Docker",
+            "softwareVersion": "1.14.10",
+            "license": "https://opensource.org/licenses/MIT",
+            "url": "https://cpamp.seakee.dev/",
+            "downloadUrl": "https://github.com/seakee/CPA-Manager-Plus/releases/latest",
+            "installUrl": "https://cpamp-docs.seakee.dev/en/guide/getting-started.html",
+            "screenshot": [
+              "https://cpamp.seakee.dev/assets/img/dashboard.webp",
+              "https://cpamp.seakee.dev/assets/img/monitoring.webp",
+              "https://cpamp.seakee.dev/assets/img/usage-analytics.webp",
+              "https://cpamp.seakee.dev/assets/img/credential-quota.webp"
+            ],
+            "image": "https://cpamp.seakee.dev/assets/og.jpg",
+            "publisher": {
+              "@id": "https://cpamp.seakee.dev/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://cpamp.seakee.dev/#faq",
+            "inLanguage": "en",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is CPA Manager Plus?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "CPA Manager Plus (CPAMP) is a self-hosted management panel and observability dashboard for CPA / CLIProxyAPI. It manages providers, credentials, OAuth, plugins and configuration, and keeps request history, cost analytics, quota windows and account automation state."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does CPAMP proxy model requests?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. CPAMP manages and observes traffic that flows through CPA / CLIProxyAPI. It is not a model proxy and does not forward model requests on its own."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between the Lite Panel and Full Mode?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Lite Panel replaces the management UI that CPA serves at :8317/management.html and adds no services or databases. Full Mode runs Manager Server at :18317/management.html for persistent request history, cost analytics, server-side inspection and automation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is my data stored?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "In local files on your own machine. Request history lives in SQLite, and the CPA Management Key is encrypted with a local data.key; back up both together. There is no sign-up and no telemetry SDK."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which providers are supported?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Everything CPA supports, including Codex, Claude, Gemini, Vertex, xAI, Devin, Muse / Meta and OpenAI-compatible providers. Account inspection and quota automation currently cover Codex and xAI."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is CPA Manager Plus free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. It is open source under the MIT license, with Docker images and native packages for Linux, macOS and Windows on amd64 and arm64."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -64,26 +181,26 @@
       <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 0v20M3 7l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     </svg>
 
-    <a class="skip-link" href="#main">跳至主要内容</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand-link" href="/" aria-label="CPA Manager Plus 首页">
+        <a class="brand-link" href="/" aria-label="CPA Manager Plus home">
           <picture>
             <source media="(prefers-color-scheme: dark)" srcset="/assets/logo-white.svg" />
             <img class="brand-logo" src="/assets/logo.svg" alt="CPA Manager Plus" width="99" height="30" />
           </picture>
         </a>
-        <nav class="nav-links" aria-label="主导航">
-          <a href="#features">功能</a>
-          <a href="#deploy">部署</a>
-          <a href="#channels">版本</a>
-          <a href="https://cpamp-docs.seakee.dev/">文档</a>
-          <a href="https://cpamp-demo.seakee.dev/">在线演示</a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="#features">Features</a>
+          <a href="#deploy">Deploy</a>
+          <a href="#channels">Releases</a>
+          <a href="https://cpamp-docs.seakee.dev/en/">Docs</a>
+          <a href="https://cpamp-demo.seakee.dev/">Live demo</a>
         </nav>
         <div class="header-actions">
-          <a class="lang-switch" href="/en/" lang="en" hreflang="en">EN</a>
-          <a class="gh-link" href="https://github.com/seakee/CPA-Manager-Plus" aria-label="GitHub 仓库">
+          <a class="lang-switch" href="/zh/" lang="zh-CN" hreflang="zh-CN">中文</a>
+          <a class="gh-link" href="https://github.com/seakee/CPA-Manager-Plus" aria-label="GitHub repository">
             <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg><span class="gh-text">GitHub</span>
           </a>
         </div>
@@ -96,23 +213,23 @@
           <div class="hero-inner">
             <a class="pill" href="https://github.com/seakee/CPA-Manager-Plus/releases/latest">
               <span class="pill-tag">v1.14.10</span>
-              <span>当前稳定版 · 查看更新日志</span>
+              <span>Latest stable · Read the changelog</span>
               <span class="pill-arrow" aria-hidden="true">→</span>
             </a>
-            <h1>看清 AI 网关里的<br /><span class="grad">每一次请求</span></h1>
+            <h1>See every request<br /><span class="grad">through your AI gateway</span></h1>
             <p class="hero-lead">
-              CPA Manager Plus 是面向 CPA / CLIProxyAPI 的自托管管理面板与可观测性平台。
-              管理 Provider、凭证与 OAuth，持久化请求历史，拆解 Token 与成本，并持续巡检账号健康与配额。
+              CPA Manager Plus is a self-hosted management panel and observability platform for CPA / CLIProxyAPI.
+              Manage providers, credentials and OAuth, keep a persistent request history, break down tokens and cost, and keep an eye on account health and quotas.
             </p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="https://cpamp-docs.seakee.dev/guide/getting-started.html">快速开始</a>
-              <a class="btn btn-secondary" href="https://cpamp-demo.seakee.dev/">打开在线演示</a>
+              <a class="btn btn-primary" href="https://cpamp-docs.seakee.dev/en/guide/getting-started.html">Get started</a>
+              <a class="btn btn-secondary" href="https://cpamp-demo.seakee.dev/">Open live demo</a>
             </div>
             <ul class="trust-row">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>完全自托管</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>数据存本地 SQLite</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>无需注册，无遥测 SDK</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>MIT 开源</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Fully self-hosted</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Data in local SQLite</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>No sign-up, no telemetry SDK</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>MIT licensed</li>
             </ul>
           </div>
 
@@ -123,10 +240,10 @@
                 <div class="browser-url">http://localhost:18317/management.html</div>
               </div>
               <img
-                src="/assets/img/dashboard-zh.webp"
+                src="/assets/img/dashboard.webp"
                 width="1600"
                 height="828"
-                alt="CPA Manager Plus 仪表盘：今日请求、成本、成功率、流量趋势、请求健康时间线与 Token 构成"
+                alt="CPA Manager Plus dashboard: today's requests, cost, success rate, traffic trend, request health timeline and token breakdown"
                 fetchpriority="high"
               />
             </div>
@@ -134,9 +251,9 @@
         </div>
       </section>
 
-      <section class="providers" aria-label="支持的 Provider">
+      <section class="providers" aria-label="Supported providers">
         <div class="container">
-          <p>统一管理 CPA 支持的主流模型服务</p>
+          <p>One place for every provider CPA supports</p>
           <ul class="provider-list">
             <li>Codex</li>
             <li>Claude</li>
@@ -153,59 +270,59 @@
       <section class="section" id="features" aria-labelledby="features-heading">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">为什么选择 CPAMP</span>
-            <h2 id="features-heading">CPA 负责转发，CPAMP 让一切可见、可管</h2>
-            <p>把日常网关配置和长期可观测性收进同一个本地面板，回答运维中最常见的三个问题。</p>
+            <span class="eyebrow">Why CPAMP</span>
+            <h2 id="features-heading">CPA routes the traffic. CPAMP makes it visible and manageable.</h2>
+            <p>Day-to-day gateway configuration and long-term observability in one local panel, answering the three questions operators ask most.</p>
           </div>
 
           <div class="feature">
             <div class="feature-copy">
-              <div class="feature-kicker"><span class="num">01</span>请求监控与失败诊断</div>
-              <h3>请求为什么失败？</h3>
-              <p>CPA usage queue 中的每一条请求都会持久化到本地 SQLite。按账号或调用方 API Key 查看实时请求，几秒内定位异常。</p>
+              <div class="feature-kicker"><span class="num">01</span>Request monitoring &amp; failure diagnosis</div>
+              <h3>Why are requests failing?</h3>
+              <p>Every request from the CPA usage queue is persisted to local SQLite. Browse live requests by account or caller API key and pinpoint problems in seconds.</p>
               <ul class="checks">
-                <li>状态码、延迟、Token、缓存与 Trace 一览无余</li>
-                <li>脱敏后的失败证据，不暴露原始失败体</li>
-                <li>请求历史支持 JSONL 导入与导出</li>
+                <li>Status, latency, tokens, cache and trace at a glance</li>
+                <li>Redacted failure evidence, never the raw failure body</li>
+                <li>Import and export request history as JSONL</li>
               </ul>
-              <a class="text-link" href="https://cpamp-demo.seakee.dev/#/demo/monitoring">体验请求监控演示</a>
+              <a class="text-link" href="https://cpamp-demo.seakee.dev/#/demo/monitoring">Try the monitoring demo</a>
             </div>
             <figure class="shot">
-              <img src="/assets/img/monitoring-zh.webp" width="1200" height="619" loading="lazy" decoding="async" alt="请求监控页面：实时请求列表、状态、延迟与失败诊断" />
+              <img src="/assets/img/monitoring.webp" width="1200" height="621" loading="lazy" decoding="async" alt="Request monitoring: live request list, status, latency and failure diagnosis" />
             </figure>
           </div>
 
           <div class="feature reverse">
             <div class="feature-copy">
-              <div class="feature-kicker"><span class="num">02</span>成本与用量分析</div>
-              <h3>成本花在哪里？</h3>
-              <p>按模型、Provider、账号、认证文件、API Key、项目、渠道和时间范围，拆解请求、Token、成本、延迟与失败。</p>
+              <div class="feature-kicker"><span class="num">02</span>Cost &amp; usage analytics</div>
+              <h3>Where is the money going?</h3>
+              <p>Break down requests, tokens, cost, latency and failures by model, provider, account, auth file, API key, project, channel and time range.</p>
               <ul class="checks">
-                <li>区分 input、output、reasoning 与 cache Token</li>
-                <li>覆盖 service tier 与长上下文计费语义</li>
-                <li>从 LiteLLM、OpenRouter 同步模型价格，并支持本地覆盖</li>
+                <li>Separate input, output, reasoning and cache tokens</li>
+                <li>Service tier and long-context pricing semantics</li>
+                <li>Model prices synced from LiteLLM and OpenRouter, with local overrides</li>
               </ul>
-              <a class="text-link" href="https://cpamp-demo.seakee.dev/#/demo/usage-analytics">体验用量分析演示</a>
+              <a class="text-link" href="https://cpamp-demo.seakee.dev/#/demo/usage-analytics">Try the usage analytics demo</a>
             </div>
             <figure class="shot">
-              <img src="/assets/img/usage-analytics-zh.webp" width="1200" height="621" loading="lazy" decoding="async" alt="用量分析页面：按模型和账号拆解 Token 与成本" />
+              <img src="/assets/img/usage-analytics.webp" width="1200" height="621" loading="lazy" decoding="async" alt="Usage analytics: tokens and cost broken down by model and account" />
             </figure>
           </div>
 
           <div class="feature">
             <div class="feature-copy">
-              <div class="feature-kicker"><span class="num">03</span>账号健康、配额与自动化</div>
-              <h3>账号和配额是否健康？</h3>
-              <p>在浏览器本地或由 Manager Server 定时巡检 Codex 与 xAI 账号，第一时间发现失效凭证和即将耗尽的额度。</p>
+              <div class="feature-kicker"><span class="num">03</span>Account health, quotas &amp; automation</div>
+              <h3>Are accounts and quotas healthy?</h3>
+              <p>Inspect Codex and xAI accounts on a schedule, in the browser or on Manager Server, and catch broken credentials and draining quotas early.</p>
               <ul class="checks">
-                <li>配额窗口、reset 证据、凭证与工作区状态</li>
-                <li>额度明确耗尽时自动受控冷却</li>
-                <li>认证故障汇总到处理队列，可复核、可恢复</li>
+                <li>Quota windows, reset evidence, credential and workspace status</li>
+                <li>Controlled cooldown when a quota is clearly exhausted</li>
+                <li>Auth failures collected in a review queue you can recover from</li>
               </ul>
-              <a class="text-link" href="https://cpamp-demo.seakee.dev/#/demo/accounts">体验凭证管理演示</a>
+              <a class="text-link" href="https://cpamp-demo.seakee.dev/#/demo/accounts">Try the credentials demo</a>
             </div>
             <figure class="shot">
-              <img src="/assets/img/credential-quota-zh.webp" width="1200" height="621" loading="lazy" decoding="async" alt="凭证配额页面：配额窗口、用量、预测与重置证据" />
+              <img src="/assets/img/credential-quota.webp" width="1200" height="620" loading="lazy" decoding="async" alt="Credential quotas: quota windows, usage, forecast and reset evidence" />
             </figure>
           </div>
         </div>
@@ -214,40 +331,40 @@
       <section class="section section-tint" aria-labelledby="caps-heading">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">完整的网关管理</span>
-            <h2 id="caps-heading">日常运维需要的，都在这里</h2>
-            <p>覆盖官方 Management Center 的管理能力，并补上长期运维所需的工具。</p>
+            <span class="eyebrow">Complete gateway management</span>
+            <h2 id="caps-heading">Everything day-to-day operations need</h2>
+            <p>The management features of the official Management Center, plus the tools long-running deployments need.</p>
           </div>
           <div class="grid-3">
             <article class="card">
               <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-sliders" /></svg></span>
-              <h3>Provider 与配置</h3>
-              <p>管理各家 Provider、模型别名、优先级、插件、日志与系统配置。</p>
+              <h3>Providers &amp; configuration</h3>
+              <p>Providers, model aliases, priorities, plugins, logs and system settings.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-key" /></svg></span>
-              <h3>凭证、OAuth 与 API Key</h3>
-              <p>统一维护认证文件、OAuth 登录与 API Key；Muse / Meta 的 Device Flow 凭证单独管理。</p>
+              <h3>Credentials, OAuth &amp; API keys</h3>
+              <p>Auth files, OAuth sign-in and API keys; Muse / Meta Device Flow credentials are managed separately.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-import" /></svg></span>
-              <h3>Sub2API 账号导入</h3>
-              <p>导入官方 Sub2API OpenAI OAuth 导出，把多账号拆分为独立的 CPA Codex 认证文件。</p>
+              <h3>Sub2API import</h3>
+              <p>Import official Sub2API OpenAI OAuth exports and split them into individual CPA Codex auth files.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-tag" /></svg></span>
-              <h3>模型价格同步</h3>
-              <p>自动同步 LiteLLM 与 OpenRouter 价格，为别名或内部模型保留本地覆盖。</p>
+              <h3>Model price sync</h3>
+              <p>Prices synced from LiteLLM and OpenRouter, with local overrides for aliases and internal models.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg></span>
-              <h3>历史导入导出</h3>
-              <p>请求历史以 JSONL 导入或导出，迁移和归档都很方便。</p>
+              <h3>History import &amp; export</h3>
+              <p>Move or archive request history as JSONL.</p>
             </article>
             <article class="card">
               <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-box" /></svg></span>
-              <h3>随处运行</h3>
-              <p>单个 Docker 容器，或 Linux、macOS、Windows 的 amd64 / arm64 原生包，可与 CPA 一同部署。</p>
+              <h3>Runs anywhere</h3>
+              <p>A single Docker container or native amd64 / arm64 packages for Linux, macOS and Windows, deployable alongside CPA.</p>
             </article>
           </div>
         </div>
@@ -256,22 +373,22 @@
       <section class="section" id="deploy" aria-labelledby="deploy-heading">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">两种方式，按需选择</span>
-            <h2 id="deploy-heading">从一行配置开始，需要时再升级</h2>
-            <p>已有 CPA 只想换个更好用的界面，选轻量面板；需要历史、成本和自动化，选完整模式。</p>
+            <span class="eyebrow">Two ways to run it</span>
+            <h2 id="deploy-heading">Start with one config line, grow when you need to</h2>
+            <p>Already run CPA and just want a better UI? Use the Lite Panel. Need history, cost and automation? Use Full Mode.</p>
           </div>
 
           <div class="paths">
             <article class="path">
               <div class="path-top">
-                <h3>轻量面板</h3>
-                <span class="tag tag-ok">零额外服务</span>
+                <h3>Lite Panel</h3>
+                <span class="tag tag-ok">No extra services</span>
               </div>
-              <p class="path-for">替换 CPA 自带的管理界面，不增加进程、端口或数据库。</p>
+              <p class="path-for">Replaces the UI CPA serves, without adding processes, ports or databases.</p>
               <dl class="meta-list">
-                <dt>入口</dt>
+                <dt>Open</dt>
                 <dd><code>:8317/management.html</code></dd>
-                <dt>登录</dt>
+                <dt>Sign in</dt>
                 <dd>CPA Management Key</dd>
               </dl>
               <div class="terminal">
@@ -281,31 +398,31 @@
   <span class="k">panel-github-repository</span>: <span class="s">'https://github.com/seakee/CPA-Manager-Plus'</span></code></pre>
               </div>
               <div class="path-links">
-                <a class="text-link" href="https://cpamp-docs.seakee.dev/deployment/cpa-panel.html">轻量面板安装指南</a>
+                <a class="text-link" href="https://cpamp-docs.seakee.dev/en/deployment/cpa-panel.html">Lite Panel guide</a>
               </div>
             </article>
 
             <article class="path featured">
               <div class="path-top">
-                <h3>完整模式</h3>
-                <span class="tag tag-brand">推荐</span>
+                <h3>Full Mode</h3>
+                <span class="tag tag-brand">Recommended</span>
               </div>
-              <p class="path-for">运行 Manager Server，解锁请求历史、成本分析、服务端巡检与自动化。</p>
+              <p class="path-for">Runs Manager Server for request history, cost analytics, server-side inspection and automation.</p>
               <dl class="meta-list">
-                <dt>入口</dt>
+                <dt>Open</dt>
                 <dd><code>:18317/management.html</code></dd>
-                <dt>部署</dt>
-                <dd>Docker 或原生包，安装向导可同时部署 CPA</dd>
+                <dt>Deploy</dt>
+                <dd>Docker or native package; the installer can deploy CPA too</dd>
               </dl>
               <div class="terminal">
-                <div class="terminal-bar"><span>bash</span><span>安装向导</span></div>
+                <div class="terminal-bar"><span>bash</span><span>installer</span></div>
                 <pre><code>curl -fsSLO https://raw.githubusercontent.com/seakee/CPA-Manager-Plus/main/bin/install-cpamp.sh
 bash install-cpamp.sh</code></pre>
               </div>
               <div class="path-links">
-                <a class="text-link" href="https://cpamp-docs.seakee.dev/deployment/installer.html">安装完整模式</a>
-                <a href="https://cpamp-docs.seakee.dev/deployment/docker.html">Docker 部署</a>
-                <a href="https://cpamp-docs.seakee.dev/guide/choosing-a-panel.html">如何选择</a>
+                <a class="text-link" href="https://cpamp-docs.seakee.dev/en/deployment/installer.html">Install Full Mode</a>
+                <a href="https://cpamp-docs.seakee.dev/en/deployment/docker.html">Docker</a>
+                <a href="https://cpamp-docs.seakee.dev/en/guide/choosing-a-panel.html">Which one?</a>
               </div>
             </article>
           </div>
@@ -315,16 +432,16 @@ bash install-cpamp.sh</code></pre>
       <section class="section section-tint" aria-labelledby="privacy-heading">
         <div class="container split">
           <div class="split-copy">
-            <span class="eyebrow">你的数据，只在你的机器上</span>
-            <h2 id="privacy-heading">为自托管而生</h2>
-            <p>请求历史、Manager 配置、账号自动化状态和模型价格都保存在本地文件中。没有云端账号，没有遥测 SDK。</p>
-            <p>CPAMP 管理和观测经过 CPA 的流量，本身不是模型代理，也不会独立转发模型请求。</p>
+            <span class="eyebrow">Your data stays on your machine</span>
+            <h2 id="privacy-heading">Built for self-hosting</h2>
+            <p>Request history, Manager settings, account automation state and model prices all live in local files. No cloud account, no telemetry SDK.</p>
+            <p>CPAMP manages and observes traffic that flows through CPA. It is not a model proxy and never forwards model requests on its own.</p>
           </div>
           <div class="facts">
-            <div class="fact"><strong>本地 SQLite</strong><span>请求历史持久化在你自己的磁盘上。</span></div>
-            <div class="fact"><strong>密钥加密保存</strong><span>CPA Management Key 用本地 <code>data.key</code> 加密。</span></div>
-            <div class="fact"><strong>失败证据脱敏</strong><span>只展示脱敏摘要，不暴露原始失败体。</span></div>
-            <div class="fact"><strong>MIT 开源</strong><span>全部源码公开，可审计、可二次开发。</span></div>
+            <div class="fact"><strong>Local SQLite</strong><span>Request history persists on your own disk.</span></div>
+            <div class="fact"><strong>Encrypted keys</strong><span>The CPA Management Key is encrypted with a local <code>data.key</code>.</span></div>
+            <div class="fact"><strong>Redacted failures</strong><span>Only redacted summaries, never raw failure bodies.</span></div>
+            <div class="fact"><strong>MIT licensed</strong><span>All source is public, auditable and forkable.</span></div>
           </div>
         </div>
       </section>
@@ -332,28 +449,63 @@ bash install-cpamp.sh</code></pre>
       <section class="section" id="channels" aria-labelledby="channels-heading">
         <div class="container">
           <div class="section-head">
-            <span class="eyebrow">版本通道</span>
-            <h2 id="channels-heading">稳定可靠，也看得见未来</h2>
-            <p>生产环境请使用 1.x 稳定版；v2 正在为首个 Beta 做准备，可以提前了解新架构。</p>
+            <span class="eyebrow">Release channels</span>
+            <h2 id="channels-heading">Stable today, with the next generation in view</h2>
+            <p>Use 1.x Stable in production. v2 is preparing its first Beta, and you can read about the new architecture now.</p>
           </div>
           <div class="channels">
             <article class="channel">
-              <h3>1.x 稳定版 <span class="tag tag-ok">Stable</span></h3>
-              <p>当前推荐用于生产的版本，最新为 v1.14.10。支持轻量面板与完整模式，Docker 镜像 <code>seakee/cpa-manager-plus</code>。</p>
+              <h3>1.x <span class="tag tag-ok">Stable</span></h3>
+              <p>Recommended for production; latest release v1.14.10. Lite Panel and Full Mode, Docker image <code>seakee/cpa-manager-plus</code>.</p>
               <div class="path-links">
-                <a class="text-link" href="https://cpamp-docs.seakee.dev/">1.x 文档</a>
-                <a href="https://github.com/seakee/CPA-Manager-Plus/releases/latest">下载最新版</a>
+                <a class="text-link" href="https://cpamp-docs.seakee.dev/en/">1.x docs</a>
+                <a href="https://github.com/seakee/CPA-Manager-Plus/releases/latest">Download</a>
                 <a href="https://hub.docker.com/r/seakee/cpa-manager-plus">Docker Hub</a>
               </div>
             </article>
             <article class="channel">
-              <h3>v2 <span class="tag tag-warn">Beta 准备中</span></h3>
-              <p>下一代架构：单镜像分发、内置网关运行时与全新控制台。文档在 <code>/next/</code> 先行公开，正式 Beta 以 GitHub 预发布版本提供。</p>
+              <h3>v2 <span class="tag tag-warn">Beta in preparation</span></h3>
+              <p>The next architecture: single-image distribution, a built-in gateway runtime and a new console. Docs are public at <code>/next/</code>; the Beta will ship as a GitHub pre-release.</p>
               <div class="path-links">
-                <a class="text-link" href="https://cpamp-docs.seakee.dev/next/">v2 Beta 文档</a>
-                <a href="https://github.com/seakee/CPA-Manager-Plus/releases">全部发布</a>
+                <a class="text-link" href="https://cpamp-docs.seakee.dev/next/en/">v2 Beta docs</a>
+                <a href="https://github.com/seakee/CPA-Manager-Plus/releases">All releases</a>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="faq" aria-labelledby="faq-heading">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">FAQ</span>
+            <h2 id="faq-heading">Frequently asked questions</h2>
+          </div>
+          <div class="faq">
+            <div class="faq-item">
+              <h3>What is CPA Manager Plus?</h3>
+              <p>CPA Manager Plus (CPAMP) is a self-hosted management panel and observability dashboard for CPA / CLIProxyAPI. It manages providers, credentials, OAuth, plugins and configuration, and keeps request history, cost analytics, quota windows and account automation state.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Does CPAMP proxy model requests?</h3>
+              <p>No. CPAMP manages and observes traffic that flows through CPA / CLIProxyAPI. It is not a model proxy and does not forward model requests on its own.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What is the difference between the Lite Panel and Full Mode?</h3>
+              <p>The Lite Panel replaces the management UI that CPA serves at <code>:8317/management.html</code> and adds no services or databases. Full Mode runs Manager Server at <code>:18317/management.html</code> for persistent request history, cost analytics, server-side inspection and automation.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Where is my data stored?</h3>
+              <p>In local files on your own machine. Request history lives in SQLite, and the CPA Management Key is encrypted with a local <code>data.key</code>; back up both together. There is no sign-up and no telemetry SDK.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Which providers are supported?</h3>
+              <p>Everything CPA supports, including Codex, Claude, Gemini, Vertex, xAI, Devin, Muse / Meta and OpenAI-compatible providers. Account inspection and quota automation currently cover Codex and xAI.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Is CPA Manager Plus free?</h3>
+              <p>Yes. It is open source under the MIT license, with Docker images and native packages for Linux, macOS and Windows on amd64 and arm64.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -361,12 +513,12 @@ bash install-cpamp.sh</code></pre>
       <section class="final" aria-labelledby="final-heading">
         <div class="container">
           <div class="final-box">
-            <h2 id="final-heading">几分钟内，让你的 CPA 一目了然</h2>
-            <p>先看看在线演示，或者直接按快速开始指南部署。</p>
+            <h2 id="final-heading">Get a clear view of your CPA in minutes</h2>
+            <p>Explore the live demo, or follow the quick start and deploy.</p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="https://cpamp-docs.seakee.dev/guide/getting-started.html">快速开始</a>
+              <a class="btn btn-primary" href="https://cpamp-docs.seakee.dev/en/guide/getting-started.html">Get started</a>
               <a class="btn btn-secondary" href="https://github.com/seakee/CPA-Manager-Plus">
-                <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>在 GitHub 上 Star
+                <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>Star on GitHub
               </a>
             </div>
           </div>
@@ -382,37 +534,37 @@ bash install-cpamp.sh</code></pre>
               <source media="(prefers-color-scheme: dark)" srcset="/assets/logo-white.svg" />
               <img class="brand-logo" src="/assets/logo.svg" alt="CPA Manager Plus" width="99" height="30" loading="lazy" />
             </picture>
-            <p>面向 CPA / CLIProxyAPI 的自托管管理面板与可观测性平台。</p>
+            <p>Self-hosted management and observability for CPA / CLIProxyAPI.</p>
           </div>
           <div class="footer-col">
-            <h4>产品</h4>
+            <h4>Product</h4>
             <ul>
-              <li><a href="#features">功能</a></li>
-              <li><a href="#deploy">部署方式</a></li>
-              <li><a href="https://cpamp-demo.seakee.dev/">在线演示</a></li>
-              <li><a href="https://github.com/seakee/CPA-Manager-Plus/releases">发布记录</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#deploy">Deploy</a></li>
+              <li><a href="https://cpamp-demo.seakee.dev/">Live demo</a></li>
+              <li><a href="https://github.com/seakee/CPA-Manager-Plus/releases">Releases</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>文档</h4>
+            <h4>Docs</h4>
             <ul>
-              <li><a href="https://cpamp-docs.seakee.dev/guide/getting-started.html">快速开始</a></li>
-              <li><a href="https://cpamp-docs.seakee.dev/">1.x 文档</a></li>
-              <li><a href="https://cpamp-docs.seakee.dev/next/">v2 Beta 文档</a></li>
+              <li><a href="https://cpamp-docs.seakee.dev/en/guide/getting-started.html">Quick start</a></li>
+              <li><a href="https://cpamp-docs.seakee.dev/en/">1.x docs</a></li>
+              <li><a href="https://cpamp-docs.seakee.dev/next/en/">v2 Beta docs</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>社区</h4>
+            <h4>Community</h4>
             <ul>
               <li><a href="https://github.com/seakee/CPA-Manager-Plus">GitHub</a></li>
-              <li><a href="https://github.com/seakee/CPA-Manager-Plus/issues">问题反馈</a></li>
+              <li><a href="https://github.com/seakee/CPA-Manager-Plus/issues">Issues</a></li>
               <li><a href="https://hub.docker.com/r/seakee/cpa-manager-plus">Docker Hub</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <span>MIT License · © 2026 Seakee · CPA Manager Plus</span>
-          <a href="/en/" lang="en" hreflang="en">English</a>
+          <a href="/zh/" lang="zh-CN" hreflang="zh-CN">中文</a>
         </div>
       </div>
     </footer>

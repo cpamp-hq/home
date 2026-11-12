@@ -865,10 +865,39 @@ code {
   color: var(--text-2);
 }
 
+/* FAQ */
+
+.faq {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  padding: 26px 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.faq-item h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 15px;
+}
+
 /* Final CTA */
 
 .final {
-  padding: 0 0 104px;
+  padding: 104px 0;
 }
 
 .final-box {
@@ -1041,7 +1070,8 @@ code {
   .paths,
   .channels,
   .grid-3,
-  .facts {
+  .facts,
+  .faq {
     grid-template-columns: minmax(0, 1fr);
   }
 

@@ -1,0 +1,13 @@
+{
+  "name": "CPA Manager Plus",
+  "short_name": "CPAMP",
+  "description": "Self-hosted management panel and observability dashboard for CPA / CLIProxyAPI.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#005cff",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
+  ]
+}
