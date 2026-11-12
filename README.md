@@ -6,9 +6,11 @@ Static bilingual project homepage for [CPA Manager Plus](https://github.com/seak
 
 ## Design Constraints
 
-- Plain static HTML + CSS (`site/`), zero JavaScript frameworks.
-- Zero external fonts, CDNs, trackers, or analytics SDKs.
+- Plain static HTML + CSS (`site/`), no JavaScript at all (the only `<script>` is JSON-LD metadata).
+- Zero external fonts, CDNs, trackers, or analytics SDKs. Light and dark themes follow `prefers-color-scheme`.
 - Brand icons and SVGs (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `assets/logo*.svg`) are copied directly from `seakee/CPA-Manager-Plus@v1.14.10`.
+- Product screenshots (`assets/img/*.webp`) are converted from the product repository `img/*.png` at `dev@0728c256` (1.x UI, synthetic demo data) with `cwebp -q 78`; `assets/og.jpg` is a 1200×630 crop of `img/dashboard.png`. Refresh them when the 1.x UI changes, and switch to v2 screenshots at GA.
+- Facts on the page (version, features, ports, install commands) must match the current 1.x Stable docs; the version pill and channel cards name the latest stable release explicitly and need updating on each 1.x release.
 
 ## Repository Layout
 
@@ -20,8 +22,10 @@ Static bilingual project homepage for [CPA Manager Plus](https://github.com/seak
     ├── 404.html                   # Bilingual 404 page
     ├── apple-touch-icon.png
     ├── assets/
+    │   ├── img/                   # Product screenshots, zh (-zh) and en
     │   ├── logo-white.svg
     │   ├── logo.svg
+    │   ├── og.jpg                 # Social preview image
     │   └── styles.css
     ├── en/
     │   └── index.html             # English homepage (/en/)
