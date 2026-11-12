@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPA Manager Plus — Self-Hosted CPA / CLIProxyAPI Management &amp; Observability</title>
+    <meta
+      name="description"
+      content="A self-hosted CPA / CLIProxyAPI management panel and AI gateway observability dashboard for requests, usage, cost, quota, failures, and account health."
+    />
+    <link rel="canonical" href="https://cpamp.seakee.dev/en/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://cpamp.seakee.dev/" />
+    <link rel="alternate" hreflang="en" href="https://cpamp.seakee.dev/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://cpamp.seakee.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CPA Manager Plus" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta
+      property="og:title"
+      content="CPA Manager Plus — Self-Hosted CPA / CLIProxyAPI Management &amp; Observability"
+    />
+    <meta
+      property="og:description"
+      content="Operate CPA providers, credentials, OAuth, plugins, and configuration while keeping persistent request history, cost analytics, and account automation in local storage."
+    />
+    <meta property="og:url" content="https://cpamp.seakee.dev/en/" />
+    <meta property="og:image" content="https://cpamp.seakee.dev/apple-touch-icon.png" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand-link" href="/en/" aria-label="CPA Manager Plus Home">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="/assets/logo-white.svg" />
+            <img class="brand-logo" src="/assets/logo.svg" alt="CPA Manager Plus" width="132" height="40" />
+          </picture>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="https://cpamp-docs.seakee.dev/en/">Docs</a>
+          <a href="https://cpamp-demo.seakee.dev/">1.x Demo</a>
+          <a href="https://cpamp-docs.seakee.dev/next/en/">v2 Beta Docs</a>
+          <a href="https://github.com/seakee/CPA-Manager-Plus">GitHub</a>
+          <a href="https://github.com/seakee/CPA-Manager-Plus/releases">Releases</a>
+          <a class="lang-switch" href="/" lang="zh-CN">简体中文</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-eyebrow">Self-Hosted · Local SQLite Persistence · Zero Telemetry SDKs</div>
+          <h1>Self-Hosted Management Panel &amp; Observability Dashboard for CPA / CLIProxyAPI</h1>
+          <p class="hero-lead">
+            Operate providers, credentials, OAuth, plugins, and configuration while keeping persistent request history, cost analytics, quota windows, failure diagnostics, and account automation in local storage.
+          </p>
+          <p class="hero-sub">
+            CPAMP manages and observes traffic through CPA / CLIProxyAPI — it is not a replacement proxy and does not forward model traffic by itself. No account registration required; all state stays in your local files.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://cpamp-docs.seakee.dev/en/guide/getting-started.html">
+              Get Started (1.x Stable)
+            </a>
+            <a class="btn btn-secondary" href="https://cpamp-demo.seakee.dev/">
+              Open 1.x Live Demo
+            </a>
+            <a class="btn btn-secondary" href="https://cpamp-docs.seakee.dev/en/">
+              Documentation
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/seakee/CPA-Manager-Plus">
+              GitHub Repository
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="channels-heading">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="channels-heading">Release Channels &amp; Installation</h2>
+            <p>Run 1.x Stable in production today, or explore upcoming architecture changes in the v2 Beta documentation.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <h3>
+                1.x Stable Release
+                <span class="badge badge-stable">Stable</span>
+              </h3>
+              <p>
+                Recommended for production deployments. Replace the UI directly on CPA <code>:8317</code>, or run Full Mode as a Docker container or native Linux, macOS, or Windows package (amd64 / arm64).
+              </p>
+              <pre class="code-block"><code>docker pull seakee/cpa-manager-plus:latest</code></pre>
+              <div class="card-links">
+                <a href="https://cpamp-docs.seakee.dev/en/guide/getting-started.html">Getting Started (EN)</a>
+                <a href="https://cpamp-docs.seakee.dev/guide/getting-started.html">快速开始 (ZH)</a>
+                <a href="https://hub.docker.com/r/seakee/cpa-manager-plus">Docker Hub (seakee/cpa-manager-plus)</a>
+                <a href="https://github.com/seakee/CPA-Manager-Plus/releases">Stable Releases</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>
+                v2 Preview Channel
+                <span class="badge badge-beta">Beta</span>
+              </h3>
+              <p>
+                Preview documentation for the next-generation CPAMP console and single-image distribution. Review the v2 Beta guides and upgrade notes before testing prerelease builds.
+              </p>
+              <ul>
+                <li>Published separately under <code>/next/</code> alongside 1.x Stable documentation.</li>
+                <li>Prerelease packages and container tags are published via GitHub Releases.</li>
+              </ul>
+              <div class="card-links">
+                <a href="https://cpamp-docs.seakee.dev/next/en/">v2 Beta Docs (EN)</a>
+                <a href="https://cpamp-docs.seakee.dev/next/">v2 Beta 文档 (/next/)</a>
+                <a href="https://github.com/seakee/CPA-Manager-Plus/releases">Prereleases on GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="questions-heading">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="questions-heading">What Can CPAMP Help You Answer?</h2>
+            <p>Unify day-to-day gateway administration and long-horizon observability in one self-hosted workspace.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3>Why are requests failing?</h3>
+              <p>
+                Inspect failure rates, HTTP status codes, latency, traces, affected models or accounts, and redacted failure summaries in persistent local SQLite history without exposing raw failure bodies.
+              </p>
+              <div class="card-links">
+                <a href="https://cpamp-demo.seakee.dev/#/demo/monitoring">Monitoring Demo (1.x)</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Where is the cost going?</h3>
+              <p>
+                Break down calls, input/output/reasoning/cached tokens, and estimated cost by model, provider, account, credential, API key, project, channel, and time range with model price sync and local overrides.
+              </p>
+              <div class="card-links">
+                <a href="https://cpamp-demo.seakee.dev/#/demo/usage-analytics">Usage Analytics Demo (1.x)</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Are accounts &amp; quotas healthy?</h3>
+              <p>
+                Manage provider credentials and OAuth logins, run scheduled Codex and xAI inspections, read quota windows and reset evidence, and apply controlled cooldowns with an account action queue.
+              </p>
+              <div class="card-links">
+                <a href="https://cpamp-demo.seakee.dev/#/demo/accounts">Accounts Demo (1.x)</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="note-box">
+            <strong>About the Live Demo:</strong>
+            The <a href="https://cpamp-demo.seakee.dev/">1.x Stable Live Demo</a> uses fictional data only. It is not a deployment or runtime mode and cannot connect to, manage, or monitor a real CPA instance.
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="modes-heading">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="modes-heading">Two Ways to Run CPAMP</h2>
+            <p>Start with a zero-service UI drop-in, and adopt Full Mode whenever you need persistent analytics and automation.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <h3>CPAMP Lightweight Panel</h3>
+              <p>
+                Served directly by CPA on <code>:8317/management.html</code>. Replaces only the upstream UI without adding another service, port, or database.
+              </p>
+              <div class="card-links">
+                <a href="https://cpamp-docs.seakee.dev/en/deployment/cpa-panel.html">Lightweight Panel Guide</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>CPAMP Full Mode</h3>
+              <p>
+                Powered by Manager Server on <code>:18317/management.html</code> for persistent request history, cost analytics, scheduled inspections, automation, and encrypted backups (SQLite + <code>data.key</code>).
+              </p>
+              <div class="card-links">
+                <a href="https://cpamp-docs.seakee.dev/en/deployment/docker.html">Docker Deployment</a>
+                <a href="https://cpamp-docs.seakee.dev/en/deployment/installer.html">One-Click Installer</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>MIT License · Copyright 2026 Seakee · CPA Manager Plus</div>
+        <div class="footer-links">
+          <a href="https://cpamp-docs.seakee.dev/en/">Documentation</a>
+          <a href="https://cpamp-docs.seakee.dev/next/en/">v2 Beta Docs</a>
+          <a href="https://cpamp-demo.seakee.dev/">1.x Live Demo</a>
+          <a href="https://hub.docker.com/r/seakee/cpa-manager-plus">Docker Hub</a>
+          <a href="https://github.com/seakee/CPA-Manager-Plus">GitHub</a>
+          <a href="https://github.com/seakee/CPA-Manager-Plus/releases">Releases</a>
+          <a href="/" lang="zh-CN">简体中文</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
